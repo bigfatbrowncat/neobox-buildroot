@@ -4,8 +4,12 @@
 #
 ################################################################################
 
-UBIBOOT_VERSION = dc54030
-UBIBOOT_SITE = $(call github,pcercuei,UBIBoot,$(UBIBOOT_VERSION))
+#UBIBOOT_VERSION = dc54030
+#UBIBOOT_SITE = $(call github,pcercuei,UBIBoot,$(UBIBOOT_VERSION))
+
+UBIBOOT_VERSION = master
+UBIBOOT_SITE=$(call github,bigfatbrowncat,neobox-ubiboot,$(UBIBOOT_VERSION))
+
 UBIBOOT_BOARD_NAME = $(call qstrip,$(BR2_PACKAGE_UBIBOOT_BOARDNAME))
 
 UBIBOOT_LICENSE = GPLv2+
