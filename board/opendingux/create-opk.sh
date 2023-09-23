@@ -56,7 +56,7 @@ ${HOST_DIR}/usr/bin/mksquashfs \
 	board/opendingux/opendingux_icon.png \
 	board/opendingux/opk_update_script.sh \
 	${TARGET_DIR}/usr/sbin/od-update \
-	${BINARIES_DIR}/${CONFIG}-update-${DATE}.opk \
+	${BINARIES_DIR}/${CONFIG}-update-latest.opk \
 	-noappend -no-xattrs -all-root
 
 echo ""
