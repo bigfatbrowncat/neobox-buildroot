@@ -18,6 +18,7 @@ fi
 if [ "$1" = clean ]; then
   echo "Clearing build location..."
   rm -rf output/${CONFIG}
+  exit 0
 fi
 
 # Unset client variables that cause issues with buildroot.
