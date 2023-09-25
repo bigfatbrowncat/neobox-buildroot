@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-PSPLASH_VERSION = 44afb7506d43cca15582b4c5b90ba5580344d75d
-PSPLASH_SITE = https://git.yoctoproject.org/psplash
+PSPLASH_VERSION = master
+PSPLASH_SITE = https://github.com/bigfatbrowncat/neobox-psplash.git
 PSPLASH_SITE_METHOD = git
 PSPLASH_LICENSE = GPL-2.0+
 PSPLASH_LICENSE_FILES = COPYING
@@ -21,13 +21,13 @@ endif
 
 PSPLASH_IMAGE = $(call qstrip,$(BR2_PACKAGE_PSPLASH_IMAGE))
 
-ifneq ($(PSPLASH_IMAGE),)
-define PSPLASH_COPY_IMAGE
-	cp $(PSPLASH_IMAGE) $(@D)/base-images/psplash-poky.png
-endef
-
-PSPLASH_POST_EXTRACT_HOOKS += PSPLASH_COPY_IMAGE
-endif
+#ifneq ($(PSPLASH_IMAGE),)
+#define PSPLASH_COPY_IMAGE
+#	cp $(PSPLASH_IMAGE) $(@D)/base-images/psplash-poky.png
+#endef
+#
+#PSPLASH_POST_EXTRACT_HOOKS += PSPLASH_COPY_IMAGE
+#endif
 
 define PSPLASH_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 644 package/psplash/psplash-start.service \
