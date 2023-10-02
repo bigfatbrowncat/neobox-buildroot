@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-PSPLASH_VERSION = master
+PSPLASH_VERSION = neobox
 PSPLASH_SITE = https://github.com/bigfatbrowncat/neobox-psplash.git
 PSPLASH_SITE_METHOD = git
 PSPLASH_LICENSE = GPL-2.0+

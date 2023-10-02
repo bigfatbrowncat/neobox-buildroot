@@ -34,8 +34,15 @@ BR2_ROOTFS_POST_BUILD_SCRIPT="board/opendingux/gcw0/cleanup-rootfs.sh board/open
 BR2_ROOTFS_POST_IMAGE_SCRIPT="board/opendingux/create-opk.sh"
 BR2_ROOTFS_POST_SCRIPT_ARGS="gcw0"
 BR2_LINUX_KERNEL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="https://github.com/OpenDingux/linux/archive/469a97aaf7ed.tar.gz"
+#BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
+#BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="https://github.com/OpenDingux/linux/archive/469a97aaf7ed.tar.gz"
+
+BR2_LINUX_KERNEL_CUSTOM_GIT=y
+BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/bigfatbrowncat/opendingux-linux.git"
+BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="neobox"
+BR2_LINUX_KERNEL_VERSION="neobox"
+BR2_LINUX_KERNEL_PATCH=""
+BR2_LINUX_KERNEL_CUSTOM_LOGO_PATH="board/opendingux/neobox-gray-320x480.png"
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/opendingux/gcw0/linux_defconfig"
 BR2_LINUX_KERNEL_IMAGE_TARGET_CUSTOM=y
@@ -45,6 +52,7 @@ BR2_LINUX_KERNEL_IMAGE_NAME="uzImage.bin"
 BR2_LINUX_KERNEL_DTS_SUPPORT=y
 BR2_LINUX_KERNEL_INTREE_DTS_NAME="ingenic/gcw0 ingenic/gcw0_proto ingenic/pocketgo2 ingenic/pocketgo2v2 ingenic/rg350 ingenic/rg350m ingenic/rg280m-v1.0 ingenic/rg280m-v1.1 ingenic/rg280v ingenic/rg300x"
 BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL=y
+
 BR2_PACKAGE_LINUX_TOOLS_GPIO=y
 BR2_PACKAGE_LINUX_TOOLS_PERF=y
 BR2_PACKAGE_LINUX_TOOLS_PERF_TUI=y
