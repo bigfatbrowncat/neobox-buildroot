@@ -1,0 +1,5 @@
+config BR2_PACKAGE_HOST_GCC_ALL_MINGW
+	bool "host gcc-mingw"
+	help
+	  Build GCC toolchain to the target platform
+	  from Windows (MinGW-w64) host
