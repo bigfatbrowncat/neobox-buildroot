@@ -1,0 +1,10 @@
+--- a/gcc/system.h	2023-10-28 19:12:18.922730874 +0000
++++ b/gcc/system.h	2023-10-28 19:14:46.781318522 +0000
+@@ -779,7 +779,6 @@
+    reporting the location of the error in the source file.  */
+ extern void fancy_abort (const char *, int, const char *)
+ 					 ATTRIBUTE_NORETURN ATTRIBUTE_COLD;
+-#define abort() fancy_abort (__FILE__, __LINE__, __FUNCTION__)
+ 
+ /* Use gcc_assert(EXPR) to test invariants.  */
+ #if ENABLE_ASSERT_CHECKING
