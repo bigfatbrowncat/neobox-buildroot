@@ -1,0 +1,5 @@
+config BR2_PACKAGE_HOST_GCC_MINGW_TO_MINGW_ALL
+	bool "host gcc mingw to mingw"
+	help
+	  Build GCC toolchain for simulator usage
+	  from and to Windows (MinGW-w64) host 

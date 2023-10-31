@@ -36,7 +36,7 @@ define HOST_GCC_TO_MINGW_APPLY_PATCHES
 	for patchdir in \
 	    package/gcc-to-mingw/$(GCC_TO_MINGW_VERSION) \
 	    $(addsuffix /gcc-to-mingw/$(GCC_TO_MINGW_VERSION),$(call qstrip,$(BR2_GLOBAL_PATCH_DIR))) \
-	    $(addsuffix /gcc,$(call qstrip,$(BR2_GLOBAL_PATCH_DIR))) ; do \
+	    $(addsuffix /gcc-to-mingw,$(call qstrip,$(BR2_GLOBAL_PATCH_DIR))) ; do \
 		if test -d $${patchdir}; then \
 			$(APPLY_PATCHES) $(@D) $${patchdir} \*.patch || exit 1; \
 		fi; \
