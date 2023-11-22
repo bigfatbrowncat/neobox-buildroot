@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ZLIB_NG_MINGW
+	bool "host (mingw) zlib-ng"
+	help
+	  Build zlib-ng library for MinGW-w64 GCC toolchain.
+	  Necessary for toolchain to be used under CLion IDE

@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Common variables for the gcc-initial-mingw and gcc-final-mingw packages.
+# Common variables for the gcc-all-mingw packages.
 #
 ################################################################################
 

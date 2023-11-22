@@ -45,9 +45,10 @@ done
 
 if [ "${TARGETS}" = sdk ] ; then
 	echo "Recompressing SDK to XZ..."
-	ARCHIVE_NAME=opendingux-${CONFIG}-toolchain.`date +'%Y-%m-%d'`
+	ARCHIVE_NAME=neobox-${CONFIG}-toolchain.`date +'%Y-%m-%d'`
 	gzip -d -c output/${CONFIG}/images/${CONFIG}-toolchain.tar.gz | xz -T0 -9 > output/${CONFIG}/images/$ARCHIVE_NAME.tar.xz
 	rm output/${CONFIG}/images/${CONFIG}-toolchain.tar.gz
+	./repack-mingw.sh output/${CONFIG}/images/$ARCHIVE_NAME.tar.xz output/${CONFIG}/images/${ARCHIVE_NAME}.mingw32-x86_64.zip
 
 	echo "The SDK has been built at:"
 	echo "output/${CONFIG}/images/$ARCHIVE_NAME.tar.xz"

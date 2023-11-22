@@ -1,0 +1,4 @@
+config BR2_PACKAGE_NINJA_MINGW
+	bool "host (mingw) ninja"
+	help
+	  Build ninja tool for MinGW-w64 GCC toolchain
